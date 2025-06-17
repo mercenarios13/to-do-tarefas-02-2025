@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f5faff 100%);
+    color: #000;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #0056b344;
+    padding: 48px 36px 36px 36px;
+    text-align: center;
+    min-width: 320px;
+    max-width: 90vw;
+    margin: 40px auto;
+    transition: box-shadow 0.2s;
+}
+.menu-container:hover {
+    box-shadow: 0 12px 40px #0056b366;
+}
+h1 {
+    color: #0056b3;
+    margin-bottom: 36px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin: 22px 0;
+}
+.menu-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #0056b3 60%, #007fff 100%);
+    color: #fff;
+    font-size: 1.15em;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #0056b322;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.menu-btn:hover {
+    background: linear-gradient(90deg, #003d80 60%, #0056b3 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 18px #0056b344;
+}
+@media (max-width: 600px) {
+    .menu-container {
+        padding: 20px 4vw;
+        min-width: unset;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    .menu-btn {
+        font-size: 1em;
+        padding: 12px 10vw;
+    }
+}
