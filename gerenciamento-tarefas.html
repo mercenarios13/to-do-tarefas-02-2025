@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f0ff 0%, #f5faff 100%);
+            color: #000;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .container-tarefas {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #0056b344;
+            padding: 36px 24px 24px 24px;
+            margin: 40px auto;
+            min-width: 320px;
+            max-width: 1100px;
+            width: 100%;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        #tarefas-container {
+            display: flex;
+            gap: 2%;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .status-col {
+            width: 32%;
+            min-width: 220px;
+            background: #f5faff;
+            border-radius: 10px;
+            padding: 12px 8px 18px 8px;
+            box-shadow: 0 2px 8px #0056b322;
+        }
+        .status-col h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.15em;
+            letter-spacing: 1px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #0056b3;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 12px 10px 10px 10px;
+            box-shadow: 0 1px 6px #0056b322;
+            font-size: 1em;
+        }
+        .card b {
+            color: #0056b3;
+            font-size: 1.08em;
+        }
+        .card select, .card button {
+            margin-top: 8px;
+            margin-right: 4px;
+        }
+        .card button {
+            background: linear-gradient(90deg, #0056b3 60%, #007fff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 18px;
+            font-size: 0.98em;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .card button:hover {
+            background: linear-gradient(90deg, #003d80 60%, #0056b3 100%);
+            transform: scale(1.04);
+        }
+        a {
+            display: inline-block;
+            margin: 0 auto 20px auto;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-align: center;
+        }
+        a:hover {
+            background: #003d80;
+        }
+        @media (max-width: 900px) {
+            #tarefas-container {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .status-col {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-tarefas">
+        <h1>Gerenciamento de Tarefas</h1>
+        <div id="tarefas-container"></div>
+        <a href="index.html">Voltar ao menu</a>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
