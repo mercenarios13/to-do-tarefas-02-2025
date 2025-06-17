@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Tarefa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f0ff 0%, #f5faff 100%);
+            color: #000;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #0056b344;
+            padding: 38px 32px 28px 32px;
+            min-width: 320px;
+            max-width: 95vw;
+            margin: 40px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 28px;
+            font-size: 2em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: stretch;
+        }
+        label {
+            text-align: left;
+            font-weight: 500;
+            color: #0056b3;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #b3c6e0;
+            margin-top: 4px;
+            font-size: 1em;
+        }
+        button[type="submit"] {
+            background: linear-gradient(90deg, #0056b3 60%, #007fff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #003d80 60%, #0056b3 100%);
+            transform: scale(1.03);
+        }
+        #mensagem {
+            margin: 18px 0 0 0;
+            color: #0056b3;
+            font-weight: 500;
+            min-height: 24px;
+        }
+        a {
+            display: inline-block;
+            margin: 24px auto 0 auto;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        a:hover {
+            background: #003d80;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 16px 4vw;
+                min-width: unset;
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Cadastro de Tarefa</h1>
+        <form id="formTarefa">
+            <label>Usuário:
+                <select id="usuarioId" required></select>
+            </label>
+            <label>Descrição:
+                <input type="text" id="descricao" required>
+            </label>
+            <label>Setor:
+                <input type="text" id="setor" required>
+            </label>
+            <label>Prioridade:
+                <select id="prioridade" required>
+                    <option value="">Selecione</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </label>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="mensagem"></div>
+        <a href="index.html">Voltar ao menu</a>
+    </div>
+    <script src="js/tarefa.js"></script>
+</body>
+</html>
